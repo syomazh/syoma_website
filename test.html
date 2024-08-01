@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Redirect Link</title>
+    <script>
+        function redirectToRandomLink() {
+            // List of URLs
+            var urls = [
+                'https://example1.com',
+                'https://example2.com',
+                'https://example3.com',
+                'https://example4.com'
+            ];
+
+            // Select a random URL from the list
+            var randomIndex = Math.floor(Math.random() * urls.length);
+            var randomUrl = urls[randomIndex];
+
+            // Redirect to the selected URL
+            window.location.href = randomUrl;
+        }
+    </script>
+</head>
+<body>
+    <a href="javascript:void(0);" onclick="redirectToRandomLink();">Click here for a surprise!</a>
+</body>
+</html>
+
