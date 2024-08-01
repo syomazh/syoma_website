@@ -178,7 +178,11 @@ function redirectToRandomLink() {
         'https://en.m.wikipedia.org/wiki/Ranked-choice_voting_in_the_United_States#Bans',
         'https://en.wikipedia.org/wiki/Potato_paradox',
         'https://en.wikipedia.org/wiki/Long-term_nuclear_waste_warning_messages',
-        'https://en.wikipedia.org/wiki/Flying_Machines_Which_Do_Not_Fly'
+        'https://en.wikipedia.org/wiki/Flying_Machines_Which_Do_Not_Fly',
+        'https://en.wikipedia.org/wiki/28th_Virginia_battle_flag',
+        'https://en.wikipedia.org/wiki/Snake_Island_campaign',
+        'https://en.wikipedia.org/wiki/Munich_massacre',
+        'https://en.wikipedia.org/wiki/Gary_Brooks_Faulkner'
     ];
 
     // Select a random URL from the list

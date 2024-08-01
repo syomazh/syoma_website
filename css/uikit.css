@@ -8693,8 +8693,8 @@ iframe[data-uk-cover] {
 .uk-margin-remove-last-child > :last-child {
   margin-bottom: 0 !important;
 }
-/* Phone landscape and bigger */
-@media (min-width: 640px) {
+/* i changered this shit */
+@media (max-width: 500px) {
   .uk-margin-remove-left\@s {
     margin-left: 0 !important;
   }
