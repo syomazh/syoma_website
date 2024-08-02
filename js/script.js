@@ -40,6 +40,14 @@ window.addEventListener("mousemove", function(e){
 });
 
 
+const font = new FontFace('Courier', 'url(path/to/font.woff2)');
+font.load().then(() => {
+    document.fonts.add(font);
+    // Continue with the rest of your code here
+}).catch((error) => {
+    console.error('Font loading failed:', error);
+});
+
 
 ctx.fillStyle = 'white'
 ctx.font = `${45 * resultion}px Courier`;
