@@ -8,9 +8,10 @@ let resultion = 1
 
 let compX = 15
 let compY = 15
+let centerer = 10
 
 
-canvas.width = 2090;
+canvas.width = 2600;
 console.log(window.innerWidth)
 // 2090
 canvas.height = 1000;
