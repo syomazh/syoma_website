@@ -3,7 +3,7 @@
 
 
 #SYOMcanvas {
-    width: 100%;
+    width: 90%;
 
     object-fit: contain;
     margin-left: auto;
@@ -11,8 +11,11 @@
 }
 
 #SYOMwrapper {
-    width: 90%;
+    width: 100%;
     max-width: 1000PX;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
