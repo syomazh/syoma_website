@@ -11,7 +11,7 @@ let compY = 15
 let centerer = 10
 
 
-canvas.width = 2600;
+canvas.width = 2090;
 console.log(window.innerWidth)
 // 2090
 canvas.height = 1000;
