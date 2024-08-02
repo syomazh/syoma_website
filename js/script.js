@@ -6,10 +6,16 @@ let resize_var =  1
 
 let resultion = 1
 
+let compX = 15
+let compY = 15
 
 
-canvas.width = 2090
-canvas.height = 1000
+canvas.width = 2090;
+console.log(window.innerWidth)
+// 2090
+canvas.height = 1000;
+console.log(window.innerHeight)
+//1000
 let particlesArray = [];
 
 
@@ -36,10 +42,10 @@ window.addEventListener("mousemove", function(e){
 
 ctx.fillStyle = 'white'
 ctx.font = `${45 * resultion}px Courier`;
-ctx.fillText('SYOMA',0,30*resultion)
+ctx.fillText('SYOMA',compX,30*resultion+compY)
 
 
-const textCoords  = ctx.getImageData(0, -15 , 150*resultion,45+30)
+const textCoords  = ctx.getImageData(compX, -15+compY , 150*resultion,45+30)
 
 
 class Particle {
