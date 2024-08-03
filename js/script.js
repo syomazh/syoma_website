@@ -39,6 +39,18 @@ window.addEventListener("mousemove", function(e){
     mouse.y =  (e.clientY - rect.top)*heightScale;
 });
 
+// Safari specific code
+window.addEventListener("mousemove", function(e){
+
+    //mouse is literal cancer to handle when canvas element is resized 
+
+    var rect = canvas.getBoundingClientRect();
+    var widthScale = canvas.width / rect.width;
+    var heightScale = canvas.height / rect.height;
+    mouse.x = (e.pageX - rect.left)*widthScale;
+    mouse.y =  (e.pageY - rect.top)*heightScale;
+});
+
 ctx.fillStyle = 'white'
 ctx.font = `${45 * resultion}px Courier`;
 ctx.fillText('SYOMA',compX,30*resultion+compY)
