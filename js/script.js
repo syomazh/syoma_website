@@ -28,32 +28,35 @@ const mouse = {
     radius: 250 * resize_var
 }
 
-window.addEventListener("mousemove", function(e){
-
-    //mouse is literal cancer to handle when canvas element is resized 
-
+// Function to handle both mouse and touch events
+function handleMouseOrTouchMove(e) {
     var rect = canvas.getBoundingClientRect();
     var widthScale = canvas.width / rect.width;
     var heightScale = canvas.height / rect.height;
-    mouse.x = (e.clientX - rect.left)*widthScale;
-    mouse.y =  (e.clientY - rect.top)*heightScale;
-});
 
-// Safari specific code
-window.addEventListener("mousemove", function(e){
+    var x, y;
+    if (e.type === "mousemove") {
+        x = e.clientX;
+        y = e.clientY;
+    } else if (e.type === "touchmove") {
+        e.preventDefault(); // Prevent default touch behavior
+        x = e.touches[0].clientX;
+        y = e.touches[0].clientY;
+    }
 
-    //mouse is literal cancer to handle when canvas element is resized 
+    mouse.x = (x - rect.left) * widthScale;
+    mouse.y = (y - rect.top) * heightScale;
+}
 
-    var rect = canvas.getBoundingClientRect();
-    var widthScale = canvas.width / rect.width;
-    var heightScale = canvas.height / rect.height;
-    mouse.x = (e.pageX - rect.left)*widthScale;
-    mouse.y =  (e.pageY - rect.top)*heightScale;
-});
+// Add event listeners for both mouse and touch events
+window.addEventListener("mousemove", handleMouseOrTouchMove);
+window.addEventListener("touchmove", handleMouseOrTouchMove);
+
+
 
 ctx.fillStyle = 'white'
 ctx.font = `${45 * resultion}px Courier`;
-ctx.fillText('SYOMA',compX,30*resultion+compY)
+ctx.fillText('PENIS',compX,30*resultion+compY)
 
 
 const textCoords  = ctx.getImageData(compX, -15+compY , 150*resultion,45+30)
