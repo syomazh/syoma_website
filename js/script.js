@@ -56,7 +56,7 @@ window.addEventListener("touchmove", handleMouseOrTouchMove);
 
 ctx.fillStyle = 'white'
 ctx.font = `${45 * resultion}px Courier`;
-ctx.fillText('PENIS',compX,30*resultion+compY)
+ctx.fillText('SYOMA',compX,30*resultion+compY)
 
 
 const textCoords  = ctx.getImageData(compX, -15+compY , 150*resultion,45+30)
