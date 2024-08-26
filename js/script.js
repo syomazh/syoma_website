@@ -203,8 +203,7 @@ function redirectToRandomLink() {
         'https://en.wikipedia.org/wiki/Snake_Island_campaign',
         'https://en.wikipedia.org/wiki/Munich_massacre',
         'https://en.wikipedia.org/wiki/Gary_Brooks_Faulkner',
-
-https://en.m.wikipedia.org/wiki/Kim_Dotcom
+        "https://en.m.wikipedia.org/wiki/Kim_Dotcom"
     ];
 
     // Select a random URL from the list
