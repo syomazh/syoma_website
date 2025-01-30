@@ -55,7 +55,7 @@ window.addEventListener("touchmove", handleMouseOrTouchMove);
 
 
 ctx.fillStyle = 'white'
-ctx.font = `${45 * resultion}px Courier`;
+ctx.font = `${45 * resultion}px Courier New`;
 ctx.fillText('SYOMA',compX,30*resultion+compY)
 
 
