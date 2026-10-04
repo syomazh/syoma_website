@@ -1,4 +1,10 @@
 /*! UIkit 3.14.0 | https://www.getuikit.com | (c) 2014 - 2022 YOOtheme | MIT License */
+/* ==========================================================================
+   syoma.place: this is NOT stock UIkit 3.14.0. It carries the site theme
+   (black background, IBM Plex Mono, card look, caption class, a repurposed
+   @s breakpoint). Every local edit is tagged "syoma:" (grep for it). Never
+   overwrite this file with an upstream download. See .claude/CLAUDE.md.
+   ========================================================================== */
 /* ========================================================================
    Component: Base
  ========================================================================== */
@@ -7,18 +13,18 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  * 3. Style
  */
-
- @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+/* syoma: added. The only place the IBM Plex Mono webfont is loaded; an @import must stay above every rule. */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 html {
   /* 1 */
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace; /* syoma: was the system font stack */
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5;
   /* 2 */
   -webkit-text-size-adjust: 100%;
   /* 3 */
-  background: #000000;
+  background: #000000; /* syoma: was #fff (this makes the page black) */
   color: #666;
 }
 /*
@@ -92,7 +98,7 @@ em {
  */
 ins {
   background: #ffd;
-  color: #000000;
+  color: #000000; /* syoma: was #666 */
   text-decoration: none;
 }
 /*
@@ -100,7 +106,7 @@ ins {
  */
 mark {
   background: #ffd;
-  color: #000000;
+  color: #000000; /* syoma: was #666 */
 }
 /*
  * Quote
@@ -223,7 +229,7 @@ h6,
 .uk-heading-xlarge,
 .uk-heading-2xlarge {
   margin: 0 0 20px 0;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace; /* syoma: was the system font stack */
   font-weight: normal;
   color: #333;
   text-transform: none;
@@ -331,7 +337,7 @@ hr,
   /* 3 */
   margin: 0 0 20px 0;
   border: 0;
-  border-top: 1px solid #303030;
+  border-top: 1px solid #303030; /* syoma: was #e5e5e5 */
 }
 /* Add margin if adjacent element */
 * + hr,
@@ -366,7 +372,7 @@ blockquote footer {
   margin-top: 10px;
   font-size: 0.875rem;
   line-height: 1.5;
-  color: #000000;
+  color: #000000; /* syoma: was #666 */
 }
 blockquote footer::before {
   content: "— ";
@@ -378,7 +384,7 @@ blockquote footer::before {
  */
 pre {
   font: 0.875rem / 1.5 Consolas, monaco, monospace;
-  color: #000000;
+  color: #000000; /* syoma: was #666 */
   -moz-tab-size: 4;
   tab-size: 4;
   /* 1 */
@@ -453,7 +459,7 @@ a.uk-link-muted,
 a.uk-link-muted:hover,
 .uk-link-muted a:hover,
 .uk-link-toggle:hover .uk-link-muted {
-  color: #000000;
+  color: #000000; /* syoma: was #666 */
 }
 /* Text
  ========================================================================== */
@@ -688,7 +694,7 @@ a.uk-link-reset,
   display: inline-block;
   width: 100px;
   max-width: 100%;
-  border-top: 1px solid #303030;
+  border-top: 1px solid #303030; /* syoma: was #e5e5e5 */
   vertical-align: top;
 }
 /* Vertical
@@ -1174,7 +1180,7 @@ button.uk-icon:not(:disabled) {
   text-decoration: none !important;
 }
 .uk-icon-link:hover {
-  color: #000000;
+  color: #000000; /* syoma: was #666 */
 }
 /* OnClick + Active */
 .uk-icon-link:active,
@@ -1543,7 +1549,7 @@ textarea.uk-form-large,
  */
 .uk-form-danger,
 .uk-form-danger:focus {
-  color: #7f6ff9;
+  color: #7f6ff9; /* syoma: was #f0506e */
   border-color: #f0506e;
 }
 /*
@@ -1988,13 +1994,13 @@ select.uk-form-width-xsmall {
  */
 .uk-button-secondary {
   background-color: #222;
-  color: #ededed;
+  color: #ededed; /* syoma: was #fff */
   border: 1px solid transparent;
-  border-radius: 5px;
+  border-radius: 5px; /* syoma: added */
 }
 /* Hover */
 .uk-button-secondary:hover {
-  background-color: #333;
+  background-color: #333; /* syoma: was #151515 */
   color: #fff;
 }
 /* OnClick + Active */
@@ -2061,7 +2067,7 @@ select.uk-form-width-xsmall {
   /* 2 */
   color: #333;
   position: relative;
-  transition: 300ms;
+  transition: 300ms; /* syoma: added */
 }
 .uk-button-text::before {
   content: "";
@@ -2074,7 +2080,7 @@ select.uk-form-width-xsmall {
 }
 /* Hover */
 .uk-button-text:hover {
-  color: #b4b0b0;
+  color: #b4b0b0; /* syoma: was #333 (no visible effect: the uk-light / card hover rules win) */
 }
 .uk-button-text:hover::before {
   right: 0;
@@ -2687,12 +2693,11 @@ select.uk-form-width-xsmall {
  * Secondary
  */
 .uk-card-secondary {
-  background-color: #181818;
-  color: #ededed;
+  background-color: #181818; /* syoma: was #222 */
+  color: #ededed; /* syoma: was #fff */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid #4e4e4e;
-
-  border-radius: 10px;
+  border: 1px solid #4e4e4e; /* syoma: added */
+  border-radius: 10px; /* syoma: added */
 }
 .uk-card-secondary .uk-card-title {
   color: #fff;
@@ -5058,10 +5063,9 @@ ul.uk-nav-sub {
 /* Container
  ========================================================================== */
 .uk-navbar-container:not(.uk-navbar-transparent) {
-  background: #000000;
+  background: #000000; /* syoma: was #f8f8f8 */
 }
 /* Groups
-
  ========================================================================== */
 /*
  * 1. Align navs and items vertically if they have a different height
@@ -5164,7 +5168,7 @@ ul.uk-nav-sub {
   padding: 0 15px;
   /* 4 */
   font-size: 0.875rem;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace; /* syoma: was the system font stack (.uk-logo further down still uses it, so the SYOMA logo is sans-serif) */
   /* 5 */
   text-decoration: none;
 }
@@ -7155,17 +7159,15 @@ ul.uk-nav-sub {
 .uk-text-warning {
   color: #faa05a !important;
 }
+/* syoma: custom slider-caption class. It replaced upstream .uk-text-danger { color: #f0506e !important; } */
 .uk-text-SYOMBOLD {
   color: #ffffff !important;
   font-weight: bold;
-
-  text-shadow: 
-  -1px -1px 0 #000,  
-   1px -1px 0 #000,
-  -1px  1px 0 #000,
-   1px  1px 0 #000; /* Adds a black outline */
-  
-  
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; /* black outline */
 }
 /* Background modifier
  ========================================================================== */
@@ -8693,7 +8695,9 @@ iframe[data-uk-cover] {
 .uk-margin-remove-last-child > :last-child {
   margin-bottom: 0 !important;
 }
-/* i changered this shit */
+/* syoma: was "Phone landscape and bigger" @media (min-width: 640px). Inverted on purpose:
+   on this site uk-margin-remove-left@s / -right@s mean "phones only (<= 500px)" and
+   index.html relies on that. Do not restore the upstream breakpoint. */
 @media (max-width: 500px) {
   .uk-margin-remove-left\@s {
     margin-left: 0 !important;
@@ -9204,7 +9208,7 @@ iframe[data-uk-cover] {
 .uk-card-secondary > :not([class*='uk-card-media']),
 .uk-overlay-primary,
 .uk-offcanvas-bar {
-  color: #ededed;
+  color: #ededed; /* syoma: was rgba(255, 255, 255, 0.7) */
 }
 .uk-light a,
 .uk-light .uk-link,

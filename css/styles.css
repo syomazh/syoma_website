@@ -1,4 +1,17 @@
-html{
-    font-family: IBM Plex Mono;
+/* Site-specific styles. Most of the theme (black background, card look, IBM Plex Mono
+   webfont import) lives in the customised css/uikit.css — see .claude/CLAUDE.md. */
+
+html {
+    font-family: 'IBM Plex Mono', monospace;
 }
 
+/* #black is an empty spacer between the hero canvas and #about. The "About" nav links
+   target it (not #about) on purpose: the two margins collapse into one gap, which leaves
+   the #black anchor exactly 150px above #about, so the About heading lands below the
+   80px sticky navbar instead of under it. Keep both margins. */
+@media (min-width: 500px) {
+    #black {
+        margin-top: 30%;
+        margin-bottom: calc(30% + 150px);
+    }
+}

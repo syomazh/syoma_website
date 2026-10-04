@@ -2,18 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/uikit.css">
     <link rel="stylesheet" href="css/styles.css">
-
     <link rel="stylesheet" href="css/node_letters.css">
-    
+
     <script src="js/uikit.js"></script>
     <script src="js/uikit-icons.js"></script>
 
     <title>Syoma Zharkov</title>
-    <link rel="icon" type="image/x-icon" href="icon.svg">
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="Official website of Syoma Zharkov, also known as Semyon Zharkov. Learn more about his projects, coursework, and contact information.">
@@ -22,450 +20,364 @@
 </head>
 <body>
 
-    <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-    
+<!-- ===== Desktop navbar (>= 960px) ===== -->
+<nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m" aria-label="Main" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
     <div class="uk-navbar-left">
         <a href="" class="uk-navbar-item uk-logo uk-light">SYOMA</a>
     </div>
     <div class="uk-navbar-right">
-
         <ul class="uk-navbar-nav uk-light">
             <li><a class="uk-button-text uk-text-capitalize" href="#black" uk-scroll>About</a></li>
             <li><a class="uk-button-text uk-text-capitalize" href="#projects" uk-scroll>Projects</a></li>
             <li><a class="uk-button-text uk-text-capitalize" href="#coursework" uk-scroll>Coursework</a></li>
-            <li><a class="uk-button-text uk-text-capitalize" href="mailto:semyonzharkov@ksu.edu" class="uk-white">Contact</a></li>
-
+            <li><a class="uk-button-text uk-text-capitalize" href="mailto:semyonzharkov@ksu.edu">Contact</a></li>
         </ul>
-
     </div>
 </nav>
 
-
-<nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-hidden@m" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-    
+<!-- ===== Mobile navbar (< 960px): hamburger opens #offcanvas-nav ===== -->
+<nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-hidden@m" aria-label="Main (mobile)" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
     <div class="uk-navbar-left">
         <a href="" class="uk-navbar-item uk-logo uk-light">SYOMA</a>
     </div>
     <div class="uk-navbar-right">
-
         <ul class="uk-navbar-nav uk-light">
-            <li><button uk-toggle="target: #offcanvas-nav" type="button" uk-navbar-toggle-icon></button></li>
-
+            <li><button uk-toggle="target: #offcanvas-nav" type="button" aria-label="Open menu" uk-navbar-toggle-icon></button></li>
         </ul>
-
     </div>
 </nav>
 
-
 <div id="offcanvas-nav" uk-offcanvas="overlay: true">
     <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-
         <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
             <li class="uk-active"><a href="#" uk-scroll>Home</a></li>
             <li class="uk-active"><a href="#black" uk-scroll>About</a></li>
             <li class="uk-active"><a href="#projects" uk-scroll>Projects</a></li>
             <li class="uk-active"><a href="#coursework" uk-scroll>Coursework</a></li>
             <li class="uk-active"><a href="mailto:semyonzharkov@ksu.edu">Contact</a></li>
-
         </ul>
-
-
-
-
     </div>
 </div>
 
-
+<!-- ===== Hero: particle "SYOMA" letters ===== -->
 <section class="uk-margin-small-left uk-margin-small-right uk-margin-medium-top uk-margin-small-bottom">
 
-<!-- HELLO INSPECT ELEMENTERS. If you are here because you want to know how I made the connected graph letters you wont find it in the HTML. Bassically everything is done in the script.js file which u can find in my GitHub repository for this website.  -->
-    <div id="SYOMwrapper">       
-        <canvas id="SYOMcanvas"></canvas>
-        <script src="js/script.js"></script>       
-        
+<!-- HELLO INSPECT ELEMENTERS. If you are here because you want to know how I made the connected graph letters you won't find it in the HTML. Basically everything is done in the script.js file which u can find in my GitHub repository for this website.  -->
+    <div id="SYOMwrapper">
+        <canvas id="SYOMcanvas" role="img" aria-label="SYOMA"></canvas>
+        <!-- Must stay after the canvas: script.js grabs #SYOMcanvas as soon as it runs. -->
+        <script src="js/script.js"></script>
     </div>
 </section>
-
 
 <br>
 
-<section id="black">
-    <style>
-        @media (min-width: 500px) {
-            #black {
-                margin-top: 30%;
-                margin-bottom: calc(30% + 150px);
-            }
+<!-- Empty spacer + scroll anchor for the "About" links (margins live in css/styles.css). -->
+<section id="black"></section>
 
-        }
-    </style>
-</section>
-
-
-
-<section id="about" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-bottom ">
+<!-- ===== About ===== -->
+<section id="about" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-bottom">
     <h3 class="uk-margin-xlarge-left uk-light"><strong>About Me:</strong></h3>
-    <p class="uk-margin-xlarge-left uk-margin-xlarge-right uk-margin-large-top uk-light"></p>
 
-<p class="uk-margin-xlarge-left uk-margin-xlarge-right uk-margin-large-top uk-light ">
-    Hello! My name is Semyon Zharkov, but I usually go by Syoma. I am a Junior at Manhattan High School concurrently enrolled in Kansas State Universtiy. I am the President of the MHS Math Club and Vice President for the school's robotics team. In my free time I enjoy laser-cutting, sewing, backpacking, and playing tennis.
+    <p class="uk-margin-xlarge-left uk-margin-xlarge-right uk-margin-large-top uk-light">
+        Hello! My name is Semyon Zharkov, but I usually go by Syoma. I am a Junior at Manhattan High School concurrently enrolled in Kansas State University. I am the President of the MHS Math Club and Vice President for the school's robotics team. In my free time I enjoy laser-cutting, sewing, backpacking, and playing tennis.
+        <br><br>
+        My email is semyonzharkov[at]ksu[dot]edu. Never hesitate to email me if you have any questions, queries, cries for help about my work or projects.
+    </p>
     <br><br>
-    My email is semyonzharkov[at]ksu[dot]edu. Never hesitate to email me if you have any questions, queries, cries for help about my work or projects.</p>
-    <br><br>
-
-
-
 </section>
 
+<!-- ===== Projects ===== -->
+<section id="projects" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+    <h3 class="uk-margin-xlarge-left uk-light uk-margin-remove-left@s">Projects</h3>
+    <p class="uk-margin-xlarge-left uk-margin-remove-left@s">Some of my favorite projects.</p>
 
-<section id="projects" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom ">
-<h3 class="uk-margin-xlarge-left uk-light  uk-margin-remove-left@s">Projects</h3>
-<p class="uk-margin-xlarge-left uk-margin-remove-left@s">Some of my favorite projects.</p>
+    <div class="uk-margin-xlarge-left uk-margin-xlarge-right uk-margin-remove-left@s uk-margin-remove-right@s">
 
-<div class="uk-margin-xlarge-left uk-margin-xlarge-right uk-margin-remove-left@s uk-margin-remove-right@s">
-
-    <div class="uk-margin uk-card uk-card-secondary uk-card-body">
-        <h4>Deaflingo</h4>
-        <p>An AI sign language learning app that uses sign recognition to provide feedback.</p>
-        <a class="uk-button-text uk-text-decoration-none" href="https://devpost.com/software/deaflingo" target="_blank">
-            <span uk-icon="icon: link">
-            </span> devpost.com </a>
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+            <h4>Deaflingo</h4>
+            <p>An AI sign language learning app that uses sign recognition to provide feedback.</p>
+            <a class="uk-button-text uk-text-decoration-none" href="https://devpost.com/software/deaflingo" target="_blank">
+                <span uk-icon="icon: link"></span> devpost.com
+            </a>
         </div>
 
-    <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-        <h4>Math Explainers</h4>
-        <p>A repository of Math explainers I created on various intresting mathematical concepts that I presented weekly at MHS Math Club.</p>
-        <a class="uk-button-text uk-text-decoration-none" href="https://github.com/MHS-Math-Club/lectures/tree/main/Syoma" target="_blank">
-            <span uk-icon="icon: link">
-            </span> GitHub.com </a>
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+            <h4>Math Explainers</h4>
+            <p>A repository of Math explainers I created on various interesting mathematical concepts that I presented weekly at MHS Math Club.</p>
+            <a class="uk-button-text uk-text-decoration-none" href="https://github.com/MHS-Math-Club/lectures/tree/main/Syoma" target="_blank">
+                <span uk-icon="icon: link"></span> GitHub.com
+            </a>
         </div>
 
-    <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-        <h4>Schedules For Algernon</h4>
-        <p>A web based GUI for a digital anealing class Scheduling Algortihm specialized to simplify dual enrollement between Manhattan High School and Kansas State Universtiy.</p>
-        <a class="uk-button-text uk-text-decoration-none" href="https://syomazh.github.io/Schedules-for-Algernon/" target="_blank">
-            <span uk-icon="icon: link">
-            </span> GitHub.io/Schedules-for-Algernon </a>
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+            <h4>Schedules For Algernon</h4>
+            <p>A web-based GUI for a digital annealing class Scheduling Algorithm specialized to simplify dual enrollment between Manhattan High School and Kansas State University.</p>
+            <a class="uk-button-text uk-text-decoration-none" href="https://syomazh.github.io/Schedules-for-Algernon/" target="_blank">
+                <span uk-icon="icon: link"></span> GitHub.io/Schedules-for-Algernon
+            </a>
         </div>
 
-
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
             <h4>Graph Hacker</h4>
             <p>An interactive game meant for learning Algebra 2 concepts in a fun way. Playable in browser :) </p>
             <a class="uk-button-text uk-text-decoration-none" href="https://syomaz.itch.io/function-hacker" target="_blank">
-                <span uk-icon="icon: link">
-                </span> itch.io </a>
-            </div>
+                <span uk-icon="icon: link"></span> itch.io
+            </a>
+        </div>
 
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
             <h4>Snoopy Hoco Box 2024</h4>
-            <p> A trifecta of my laser cutting, 3d printing, and animation experience . Made as a gift for our school's Homecoming dance.  </p>
+            <p> A trifecta of my laser cutting, 3D printing, and animation experience. Made as a gift for our school's Homecoming dance.  </p>
             <a class="uk-button-text uk-text-decoration-none" href="subpage/snoopy.html" target="_blank">
-                <span uk-icon= "icon: link">
-                </span> Image Gallery </a>
-                
+                <span uk-icon="icon: link"></span> Image Gallery
+            </a>
         </div>
 
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
             <h4>Piano Warlock</h4>
-            <p> A voice activated assistant that can control LED's above a piano keyboard to show what notes to play and help you learn different songs.</p>
+            <p> A voice activated assistant that can control LEDs above a piano keyboard to show what notes to play and help you learn different songs.</p>
             <a class="uk-button-text uk-text-decoration-none" href="https://devpost.com/software/piano-warlock" target="_blank">
-                <span uk-icon= "icon: link">
-                </span> devpost.com </a>
+                <span uk-icon="icon: link"></span> devpost.com
+            </a>
         </div>
 
-
-        
-            <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-                <h4>Beauty of Mathematics</h4>
-                <p>A compilation of my favorite math visualizations that I've created for homeworks or just for fun.</p>
-                <a class="uk-button-text uk-text-decoration-none" href="gallery/beauty_of_math.pdf" target="_blank">
-                    <span uk-icon= "icon: link">
-                    </span> link to PDF </a>
-            </div>
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-                <h4>DMV Wizard</h4>
-                <p>A driving simulator setup using laser cut cardboard and an Arduino intended as a cheap way for people to learn driving.  </p>
-                <a class="uk-button-text uk-text-decoration-none" href="https://devpost.com/software/dmz-wizard" target="_blank">
-                    <span uk-icon= "icon: link">
-                    </span> devpost.com </a>
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+            <h4>Beauty of Mathematics</h4>
+            <p>A compilation of my favorite math visualizations that I've created for homeworks or just for fun.</p>
+            <a class="uk-button-text uk-text-decoration-none" href="gallery/beauty_of_math.pdf" target="_blank">
+                <span uk-icon="icon: link"></span> link to PDF
+            </a>
         </div>
 
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+            <h4>DMV Wizard</h4>
+            <p>A driving simulator setup using laser cut cardboard and an Arduino intended as a cheap way for people to learn driving.  </p>
+            <a class="uk-button-text uk-text-decoration-none" href="https://devpost.com/software/dmz-wizard" target="_blank">
+                <span uk-icon="icon: link"></span> devpost.com
+            </a>
+        </div>
+
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
             <h4>MHS Charity Poker Tournament</h4>
             <p>Organized and Marketed a fundraiser Poker event on behalf of MHS Math Club. Participants would compete for various home-made prizes. All profits went to PiH to fight maternal Mortality.</p>
             <a class="uk-button-text uk-text-decoration-none" href="https://www.instagram.com/mhscharitypoker/" target="_blank">
-                <span uk-icon= "icon: link">
-                </span> instagram.com </a>
+                <span uk-icon="icon: link"></span> instagram.com
+            </a>
         </div>
 
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-                <h4>Kiselev's Geometry, Translated</h4>
-                <p> A collection of 400+ pages of Translated homework from the renown Russian textbook "Kiselev's Geometry: Planimetry" that I created over time for my Tutees. </p>
-                <a class="uk-button-text uk-text-decoration-none" href="https://drive.google.com/drive/folders/1ff3zyYDnM-AieTVxy2k-Jf7fOopBiz?usp=drive_link" target="_blank">
-                    <span uk-icon= "icon: link">
-                    </span> drive.google.com </a>
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+            <h4>Kiselev's Geometry, Translated</h4>
+            <p> A collection of 400+ pages of Translated homework from the renowned Russian textbook "Kiselev's Geometry: Planimetry" that I created over time for my Tutees. </p>
+            <a class="uk-button-text uk-text-decoration-none" href="https://drive.google.com/drive/folders/1ff3zyYDnM-AieTVxy2k-Jf7fOopBiz?usp=drive_link" target="_blank">
+                <span uk-icon="icon: link"></span> drive.google.com
+            </a>
         </div>
 
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
             <h4>Vote Boat</h4>
-            <p> A web-app aimed to simplify voter research. Scrapes the web for information and voting records on a politcian then uses LLM's to neatly summarize </p>
+            <p> A web-app aimed to simplify voter research. Scrapes the web for information and voting records on a politician then uses LLMs to neatly summarize it.</p>
             <a class="uk-button-text uk-text-decoration-none" href="https://devpost.com/software/vote-boat" target="_blank">
-                <span uk-icon= "icon: link">
-                </span> devpost.com </a>
+                <span uk-icon="icon: link"></span> devpost.com
+            </a>
         </div>
-    
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-                <h4>Sewing</h4>
-                <p>Not really a specific project but sewing is too big a part of my life to not mention it. I included my favorite garments that I've designed and made below</p>
-                <a class="uk-button-text uk-text-decoration-none" href="subpage/garment.html" target="_blank">
-                    <span uk-icon= "icon: link">
-                    </span> Garment Gallery </a>
+
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+            <h4>Sewing</h4>
+            <p>Not really a specific project but sewing is too big a part of my life to not mention it. I included my favorite garments that I've designed and made below</p>
+            <a class="uk-button-text uk-text-decoration-none" href="subpage/garment.html" target="_blank">
+                <span uk-icon="icon: link"></span> Garment Gallery
+            </a>
         </div>
-</div>
+    </div>
 
-
-    <br> 
-
-<nav></nav>
+    <br>
 </section>
-</div>
 
-
-
+<!-- ===== Coursework ===== -->
 <section id="coursework" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
     <h3 class="uk-margin-xlarge-left uk-light uk-margin-remove-left@s">Coursework</h3>
-    <p class="uk-margin-xlarge-left uk-margin-remove-left@s">these are in the order of which I took them</p>
-    
+    <p class="uk-margin-xlarge-left uk-margin-remove-left@s">These are in the order in which I took them</p>
+
     <div class="uk-margin-xlarge-left uk-margin-xlarge-right uk-margin-remove-left@s uk-margin-remove-right@s">
-        <!-- projects -->
+
         <div class="uk-margin uk-card uk-card-secondary uk-card-body">
             <h4>MATH 350 - Mathematical Scholars Calculus 3</h4>
             <p>Provides the first semester of an integrated approach to linear algebra, multivariable calculus, and ordinary differential equations with specific topics including vector spaces, linear transformations, solutions to matrix equations, dimension, rank, eigenvalues, inner products, Sylvester’s Theorem, multi-linear algebra, vector valued functions, vector fields and general ordinary differential equations. </p>
-            </div>
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
+        </div>
+
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
             <h4>MATH 351 - Mathematical Scholars Calculus 4</h4>
             <p>Provides the second semester of an integrated approach to linear ordinary differential equations, Picard’s Theorem, limits and continuity in many variables, partial derivatives, optimization problems, integration of functions of several variables, Fubini’s Theorem, integration of differential forms and Generalized Stokes’ Theorem. </p>
         </div>
-            
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
+
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
             <h4>MATH 510 - Discrete Mathematics </h4>
             <p>Combinatorics and graph theory. Topics selected from counting principles, permutations and combinations, the inclusion-exclusion principle, recurrence relations, trees, graph coloring, Eulerian and Hamiltonian circuits, block designs, and Ramsey Theory.</p>
         </div>
 
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
             <h4>CIS 300 - Data and Program Structures </h4>
             <p>A study of common data and program structures together with associated algorithms. Topics include interfaces, design patterns, arrays, stacks, queues, lists, trees, hash tables, recursion, binary search, and tree traversals. Experience with both use and implementation of these structures and algorithms using a modern programming language. Discussion of tradeoffs involving performance and software maintainability.</p>
         </div>
 
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
             <h4>CIS 301 - Logical Foundations of Programming</h4>
             <p>Logical formalisms used to model and reason about computer systems. Propositional and predicate logic, syntax, semantics, and proof theory; soundness and completeness issues. Mathematical induction. Program verification: invariants and program logics.</p>
         </div>
 
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
             <h4>MATH 633 - Advanced Calculus I</h4>
             <p>Functions of one variable; limits, continuity, differentiability, Riemann-Stieltjes integral, sequences, series, power series, improper integrals.</p>
         </div>
 
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
             <h4>PHYS 224 - Engineering Physics II</h4>
             <p>Fundamentals of electricity and magnetism, electromagnetic waves, and optics, following Halliday, Resnick, and Walker (6th ed.). Topics include electric fields, circuits, magnetism, EM waves, and wave optics, with an introduction to quantum physics.</p>
         </div>
 
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
             <h4>MATH 515 - Advanced Introduction to Linear Algebra</h4>
             <p>Provides a rigorous introduction to the fundamental concepts of linear algebra. Topics include vector spaces, linear operators, matrix representations, systems of linear equations, determinants, spectral theory, and inner product spaces. Emphasis is placed on mathematical reasoning and proof writing, blending abstract theory with concrete computational techniques.</p>
         </div>
-        
+
         <p class="uk-margin-xlarge-left uk-margin-remove-left@s">Current Classes:</p>
 
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
             <h4>STAT 610 - Advanced Introduction to Statistics</h4>
             <p>Axiomatic probability, random variables, probability distributions, conditional distributions, transformation methods, and convergence theory.</p>
         </div>
 
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
             <h4>PHYS 325 – Physics III: Relativity and Quantum Physics</h4>
             <p> Special relativity and quantum mechanics including time dilation, wave–particle duality, Schrödinger equation, and applications to atomic systems.</p>
         </div>
-
-        <!-- <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-            <h4>CIS 300 - Data and Program Structures </h4>
-            <p>A stud</p>
-        </div> -->
     </div>
-    
-    
-        <br> 
-    
-    <nav></nav>
+
+    <br>
 </section>
 
-
-
-
-
+<!-- ===== More: links + camera-roll slider ===== -->
 <section id="more" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
     <h3 class="uk-margin-xlarge-left uk-light uk-margin-remove-left@s">More</h3>
-    <p class="uk-margin-xlarge-left uk-margin-remove-left@s">This is all the miscellaneous stuff that didn't fit into any of the sections but i still wanted to include</p>
-    
-    <div class="uk-margin-xlarge-left uk-margin-xlarge-right  uk-margin-remove-left@s uk-margin-remove-right@s">
+    <p class="uk-margin-xlarge-left uk-margin-remove-left@s">This is all the miscellaneous stuff that didn't fit into any of the sections but I still wanted to include.</p>
 
+    <div class="uk-margin-xlarge-left uk-margin-xlarge-right uk-margin-remove-left@s uk-margin-remove-right@s">
 
         <div class="uk-margin uk-card uk-card-secondary uk-card-body">
-
             <p><a href="https://github.com/syomazh" class="uk-link-text"><u>click here</u></a>
                 to see my GitHub which has the code for most of my projects, including this website.</p>
-            
+
             <p><a href="https://www.youtube.com/@syomazh" class="uk-link-text"><u>click here</u></a>
                 to see my YouTube</p>
 
             <p><a href="https://syomaz.itch.io/" class="uk-link-text"><u>click here</u></a>
                 to see some of the silly games I made a long time ago. These were some of my first ever large programming projects</p>
 
+            <!-- redirectToRandomLink() is defined in js/script.js -->
             <p><a href="javascript:void(0);" onclick="redirectToRandomLink();" class="uk-link-text"><u>click here</u></a>
-                 to read a random from a list of Wikipedia articles that I found intresting</p>
-            
+                to read a random article from a list of Wikipedia articles that I found interesting</p>
+        </div>
 
-            </div>
-            
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-            <p>I believe A person's cameraroll says a lot about them so below is my "Favorites" folder</p>
-
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+            <p>I believe a person's camera roll says a lot about them so below is my "Favorites" folder</p>
 
             <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true">
                 <div class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m">
                     <div>
-                        <img src="gallery\bornana (1).jpg" width="600" height="600" alt="winter hike up Mont Jovet">
+                        <img src="gallery/bornana (1).jpg" width="600" height="600" loading="lazy" alt="Winter Hike up Mont Jovet">
                         <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Winter Hike up Mont Jovet</p></div>
                     </div>
                     <div>
-                        <img src="gallery\bornana (2).jpg" width="600" height="600" alt="me in my blond haired youth">
+                        <img src="gallery/bornana (2).jpg" width="600" height="600" loading="lazy" alt="Me in my Blond Haired Youth">
                         <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Me in my Blond Haired Youth</p></div>
                     </div>
                     <div>
-                        <img src="gallery\bornana (3).webp" width="600" height="600" alt="">
-                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>The west Coast of America</p></div>
+                        <img src="gallery/bornana (3).webp" width="600" height="600" loading="lazy" alt="The West Coast of America">
+                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>The West Coast of America</p></div>
                     </div>
                     <div>
-                        <img src="gallery\bornana (4).jpg" width="600" height="600" alt="">
-                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Pondering the Fjords of Norway</p></div>  
+                        <img src="gallery/bornana (4).jpg" width="600" height="600" loading="lazy" alt="Pondering the Fjords of Norway">
+                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Pondering the Fjords of Norway</p></div>
                     </div>
                     <div>
-                        <img src="gallery\bornana (5).jpg" width="600" height="600" alt="">
+                        <img src="gallery/bornana (5).jpg" width="600" height="600" loading="lazy" alt="The Moscow Metro">
                         <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>The Moscow Metro</p></div>
                     </div>
                     <div>
-                        <img src="gallery\bornana (6).jpg" width="600" height="600" alt="">
+                        <img src="gallery/bornana (6).jpg" width="600" height="600" loading="lazy" alt="High Exposure Photography in the Alpes">
                         <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>High Exposure Photography in the Alpes</p></div>
                     </div>
                     <div>
-                        <img src="gallery\bornana (7).jpg" width="600" height="600" alt="">
+                        <img src="gallery/bornana (7).jpg" width="600" height="600" loading="lazy" alt="Golden Fall Outside my Moscow Residence">
                         <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Golden Fall Outside my Moscow Residence</p></div>
                     </div>
                     <div>
-                        <img src="gallery\bornana (8).jpg" width="600" height="600" alt="">
+                        <img src="gallery/bornana (8).jpg" width="600" height="600" loading="lazy" alt="Winter Outside my School in Moscow">
                         <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Winter Outside my School in Moscow</p></div>
                     </div>
                     <div>
-                        <img src="gallery\bornana (9).jpg" width="600" height="600" alt="">
+                        <img src="gallery/bornana (9).jpg" width="600" height="600" loading="lazy" alt="Festivities in St. Petersburg">
                         <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Festivities in St. Petersburg</p></div>
                     </div>
                     <div>
-                        <img src="gallery\bornana (10).png" width="600" height="600" alt="">
-                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>The Rolling Hills of 
-                            Abkhazia, Georgia</p></div>
+                        <img src="gallery/bornana (10).png" width="600" height="600" loading="lazy" alt="The Rolling Hills of Abkhazia, Georgia">
+                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>The Rolling Hills of Abkhazia, Georgia</p></div>
                     </div>
-
                     <div>
-                        <img src="gallery\bornana (11).jpg" width="600" height="600" alt="">
+                        <img src="gallery/bornana (11).jpg" width="600" height="600" loading="lazy" alt="Celebrating Pi Day">
                         <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Celebrating Pi Day</p></div>
                     </div>
-
                     <div>
-                        <img src="gallery\bornana (12).jpg" width="600" height="600" alt="">
-                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Mogging the Ports of Coppenhagen</p></div>
+                        <img src="gallery/bornana (12).jpg" width="600" height="600" loading="lazy" alt="Mogging the Ports of Copenhagen">
+                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Mogging the Ports of Copenhagen</p></div>
                     </div>
-
-
                     <div>
-                        <img src="gallery\bornana (13).jpg" width="600" height="600" alt="">
-                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Explaining The HyperLogLog Algortihm</p></div>
+                        <img src="gallery/bornana (13).jpg" width="600" height="600" loading="lazy" alt="Explaining The HyperLogLog Algorithm">
+                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Explaining The HyperLogLog Algorithm</p></div>
                     </div>
-
-
                     <div>
-                        <img src="gallery\bornana (14).jpg" width="600" height="600" alt="">
-                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Some Pretty Rocky Mountians</p></div>
+                        <img src="gallery/bornana (14).jpg" width="600" height="600" loading="lazy" alt="Some Pretty Rocky Mountains">
+                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Some Pretty Rocky Mountains</p></div>
                     </div>
-
-
                     <div>
-                        <img src="gallery\bornana (15).jpg" width="600" height="600" alt="">
+                        <img src="gallery/bornana (15).jpg" width="600" height="600" loading="lazy" alt="Me and My Brother Styopa">
                         <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Me and My Brother Styopa</p></div>
                     </div>
-
-
                     <div>
-                        <img src="gallery\bornana (16).webp" width="600" height="600" alt="">
-                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>San Fransisco</p></div>
+                        <img src="gallery/bornana (16).webp" width="600" height="600" loading="lazy" alt="San Francisco">
+                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>San Francisco</p></div>
                     </div>
-
-
-
                     <div>
-                        <img src="gallery\bornana (17).jpg" width="600" height="600" alt="">
-                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>My Majestic Freind Rowan</p></div>
+                        <img src="gallery/bornana (17).jpg" width="600" height="600" loading="lazy" alt="My Majestic Friend Rowan">
+                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>My Majestic Friend Rowan</p></div>
                     </div>
-
-
-
                     <div>
-                        <img src="gallery\bornana (18).jpg" width="600" height="600" alt="">
+                        <img src="gallery/bornana (18).jpg" width="600" height="600" loading="lazy" alt="An Evening Walk from School in Kansas">
                         <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>An Evening Walk from School in Kansas</p></div>
                     </div>
-
-
-
                     <div>
-                        <img src="gallery\bornana (19).jpg" width="600" height="600" alt="">
+                        <img src="gallery/bornana (19).jpg" width="600" height="600" loading="lazy" alt="Colorado Sugar Powdered Forests">
                         <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Colorado Sugar Powdered Forests</p></div>
                     </div>
-
-
-
-
                     <div>
-                        <img src="gallery\bornana (20).jpg" width="600" height="600" alt="">
-                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Back When I was Cool (9 years ago)</p></div> 
+                        <img src="gallery/bornana (20).jpg" width="600" height="600" loading="lazy" alt="Back When I was Cool">
+                        <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>Back When I was Cool (9 years ago)</p></div>
                         <!-- the fact that i am changing (current year minus 2014) the year by hand is legit stupid, am i a coder or what -->
                     </div>
-
-
-
                     <div>
-                        <img src="gallery\bornana (21).jpg" width="600" height="600" alt="">
+                        <img src="gallery/bornana (21).jpg" width="600" height="600" loading="lazy" alt="The Silent Skies of Turkey">
                         <div class="uk-position-bottom-center uk-panel uk-text-small uk-text-SYOMBOLD"><p>The Silent Skies of Turkey</p></div>
                     </div>
-
-
-                    
-                    
                 </div>
-            
-                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
-                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
-            
+
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href aria-label="Previous photos" uk-slidenav-previous uk-slider-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href aria-label="Next photos" uk-slidenav-next uk-slider-item="next"></a>
             </div>
-
-
-
-        <!-- slider goofy aah -->
+            <!-- slider goofy aah -->
         </div>
-
     </div>
-
+</section>
 
 </body>
 </html>

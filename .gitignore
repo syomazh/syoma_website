@@ -1,0 +1,11 @@
+# OS / editor clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/
+
+# Local tooling (this site has no build step, so nothing here should ever be committed)
+node_modules/
+.claude/settings.local.json

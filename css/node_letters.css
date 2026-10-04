@@ -1,18 +1,12 @@
-
-
-
-
+/* Hero canvas. js/script.js gives it a fixed 2090x1000 bitmap; CSS only scales it
+   (90% of a wrapper capped at 1000px), so the hero keeps that aspect ratio. */
 #SYOMcanvas {
     width: 90%;
-
-    object-fit: contain;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #SYOMwrapper {
     width: 100%;
-    max-width: 1000PX;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
