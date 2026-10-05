@@ -75,7 +75,7 @@ the bare `href` on the slider arrows, which UIkit needs.
 | `css/uikit.css` | UIkit 3.14.0 **with site customisations** (tagged `syoma:`) |
 | `css/styles.css` | Site-specific CSS: font fallback, `#black` spacer margins. Put new site styles here |
 | `css/node_letters.css` | Sizing for the hero canvas and its wrapper |
-| `js/uikit.js`, `js/uikit-icons.js` | Stock UIkit 3.14.0. Icons are used only for the 12 `uk-icon="icon: link"` |
+| `js/uikit.js`, `js/uikit-icons.js` | Stock UIkit 3.14.0. Icons are used only for the 16 `uk-icon="icon: link"` |
 | `js/script.js` | Particle letters, `redirectToRandomLink()` (35 Wikipedia URLs), mobile-menu auto-close |
 | `subpage/garment.html`, `subpage/snoopy.html` | Standalone galleries (no UIkit, light theme) with their images next to them |
 | `gallery/bornana (N).ext` | Slider photos (1–21 used), plus `beauty_of_math.pdf` (linked from a project card) |
@@ -104,9 +104,10 @@ The body, in order:
 5. `<br>` and then `section#black`, the empty spacer and scroll anchor.
 6. **`#about`**: one `<p>` bio. It does not use the `@s` classes, so it keeps its side margins on
    phones.
-7. **`#projects`**: 12 cards.
-8. **`#coursework`**: past classes in the order taken, then a "Current Classes:" `<p>` and the
-   current ones.
+7. **`#projects`**: 16 cards.
+8. **`#coursework`**: most recent first. A "Current Classes:" `<p>` with the Stanford Fall 2026
+   classes, then a "Past Classes:" `<p>` with every class on the K-State transcript (Spring 2026
+   back to Spring 2023).
 9. **`#more`**: a links card, plus a card with the photo slider (`uk-slider="sets: true"`, 1-up
    below 960px, 3-up above).
 
@@ -128,8 +129,11 @@ Cards are ordered by the owner's preference, newest-favourite first. The link la
 bare domain.
 
 **Add a course.** Use the same card, without the link (`<h4>DEPT 123 - Title</h4><p>Catalog
-description.</p>`). At the end of a semester, move the "Current Classes" cards above the "Current
-Classes:" `<p>` (past classes stay in the order taken), then add the new current ones below it.
+description.</p>`). The list runs newest first. Current cards go between the "Current Classes:"
+`<p>` and the "Past Classes:" `<p>` (both
+`<p class="uk-margin-xlarge-left uk-margin-remove-left@s">`). At the end of a semester, move those
+cards to just below "Past Classes:", keeping the newest on top, and drop the "Current Classes:"
+`<p>` if nothing is current.
 
 **Add a slider photo.** Strip GPS first, keep the long edge ≤ 1600px, then add:
 ```html
@@ -302,9 +306,8 @@ The images are referenced relatively, so the pages must stay next to their image
 
 ## Content checklist (owner, roughly once a semester)
 
-- The bio in `#about`. It still says "Junior at Manhattan High School concurrently enrolled in
-  Kansas State University".
-- The contact email `semyonzharkov@ksu.edu`. It appears in both navbars and in the bio.
+- The bio in `#about`. As of Oct 2026 it says "first-year at Stanford University".
+- The contact email `syoma@stanford.edu`. It appears in both navbars and in the bio.
 - Move "Current Classes" into the past list and add new ones.
 - The slider caption "Back When I was Cool (9 years ago)" is updated by hand.
 - "Snoopy Hoco Box 2024", and "DRESSES: coming soon" on the garment page.
