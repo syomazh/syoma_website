@@ -15,3 +15,66 @@ html {
         margin-bottom: calc(30% + 150px);
     }
 }
+
+/* House photo page. Keep its layout separate from the homepage. */
+.house-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+}
+
+.house-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+}
+
+.house-page h1 {
+    margin: 40px 0;
+    font-size: 32px;
+}
+
+.house-page h2 {
+    margin: 0 0 24px;
+    font-size: 24px;
+}
+
+.house-page section + section {
+    margin-top: 48px;
+}
+
+.house-gallery {
+    columns: 2;
+    column-gap: 16px;
+}
+
+.house-gallery a {
+    display: block;
+    break-inside: avoid;
+    margin-bottom: 16px;
+}
+
+.house-gallery a:focus-visible {
+    outline: 2px solid #ededed;
+    outline-offset: 4px;
+}
+
+.house-gallery img {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    border: 1px solid #4e4e4e;
+}
+
+@media (max-width: 600px) {
+    .house-container {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .house-gallery {
+        columns: 1;
+    }
+}
