@@ -49,22 +49,14 @@ html {
     column-gap: 16px;
 }
 
-.house-gallery a {
-    display: block;
-    break-inside: avoid;
-    margin-bottom: 16px;
-}
-
-.house-gallery a:focus-visible {
-    outline: 2px solid #ededed;
-    outline-offset: 4px;
-}
-
 .house-gallery img {
     display: block;
     box-sizing: border-box;
     width: 100%;
+    max-width: 100%;
     height: auto;
+    break-inside: avoid;
+    margin-bottom: 16px;
     border: 1px solid #4e4e4e;
 }
 
